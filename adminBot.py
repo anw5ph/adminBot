@@ -40,96 +40,99 @@ async def on_raw_reaction_add(payload):
     if payload.message_id != EXPERIENCE_ROLES_MESSAGE and payload.message_id != LANGUAGES_ROLES_MESSAGE:
         return 
     
+    guild = bot.get_guild(payload.guild_id)
+    member = guild.get_member(payload.user_id)
+    
     # Experience Roles
     if payload.message_id == EXPERIENCE_ROLES_MESSAGE:
         if payload.emoji.name == "🗡️":
-            role = discord.utils.get(payload.member.guild.roles, name="Recruit")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Recruit")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🛡️":
-            role = discord.utils.get(payload.member.guild.roles, name="Brigade")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Brigade")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "⚔️":
-            role = discord.utils.get(payload.member.guild.roles, name="Elite")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Elite")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🏰":
-            role = discord.utils.get(payload.member.guild.roles, name="Legendary")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Legendary")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
 
     # Programming Language Roles
     if payload.message_id == LANGUAGES_ROLES_MESSAGE:
         if payload.emoji.name == "🐍":
-            role = discord.utils.get(payload.member.guild.roles, name="Python")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Python")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "☕":
-            role = discord.utils.get(payload.member.guild.roles, name="Java")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Java")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🕸️":
-            role = discord.utils.get(payload.member.guild.roles, name="JavaScript")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="JavaScript")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "➕":
-            role = discord.utils.get(payload.member.guild.roles, name="C++")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="C++")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🔷":
-            role = discord.utils.get(payload.member.guild.roles, name="C#")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="C#")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "📘":
-            role = discord.utils.get(payload.member.guild.roles, name="TypeScript")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="TypeScript")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🐘":
-            role = discord.utils.get(payload.member.guild.roles, name="PHP")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="PHP")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🐦":
-            role = discord.utils.get(payload.member.guild.roles, name="Swift")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Swift")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "💎":
-            role = discord.utils.get(payload.member.guild.roles, name="Ruby")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Ruby")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🚀":
-            role = discord.utils.get(payload.member.guild.roles, name="Go")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Go")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "⚰️":
-            role = discord.utils.get(payload.member.guild.roles, name="C")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="C")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🎯":
-            role = discord.utils.get(payload.member.guild.roles, name="Dart")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="Dart")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
         elif payload.emoji.name == "🌐":
-            role = discord.utils.get(payload.member.guild.roles, name="HTML/CSS")
-            if role not in payload.member.roles:
-                await payload.member.add_roles(role)
-                print(f"{role} role added to {payload.member}")
+            role = discord.utils.get(member.guild.roles, name="HTML/CSS")
+            if role not in member.roles:
+                await member.add_roles(role)
+                print(f"{role} role added to {member}")
 
 
 # Remove roles when reaction is removed
@@ -167,67 +170,67 @@ async def on_raw_reaction_remove(payload):
     # Programming Language Roles
     if payload.message_id == LANGUAGES_ROLES_MESSAGE:
         if payload.emoji.name == "🐍":
-            role = discord.utils.get(payload.member.guild.roles, name="Python")
+            role = discord.utils.get(member.guild.roles, name="Python")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "☕":
-            role = discord.utils.get(payload.member.guild.roles, name="Java")
+            role = discord.utils.get(member.guild.roles, name="Java")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🕸️":
-            role = discord.utils.get(payload.member.guild.roles, name="JavaScript")
+            role = discord.utils.get(member.guild.roles, name="JavaScript")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "➕":
-            role = discord.utils.get(payload.member.guild.roles, name="C++")
+            role = discord.utils.get(member.guild.roles, name="C++")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🔷":
-            role = discord.utils.get(payload.member.guild.roles, name="C#")
+            role = discord.utils.get(member.guild.roles, name="C#")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "📘":
-            role = discord.utils.get(payload.member.guild.roles, name="TypeScript")
+            role = discord.utils.get(member.guild.roles, name="TypeScript")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🐘":
-            role = discord.utils.get(payload.member.guild.roles, name="PHP")
+            role = discord.utils.get(member.guild.roles, name="PHP")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🐦":
-            role = discord.utils.get(payload.member.guild.roles, name="Swift")
+            role = discord.utils.get(member.guild.roles, name="Swift")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "💎":
-            role = discord.utils.get(payload.member.guild.roles, name="Ruby")
+            role = discord.utils.get(member.guild.roles, name="Ruby")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🚀":
-            role = discord.utils.get(payload.member.guild.roles, name="Go")
+            role = discord.utils.get(member.guild.roles, name="Go")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "⚰️":
-            role = discord.utils.get(payload.member.guild.roles, name="C")
+            role = discord.utils.get(member.guild.roles, name="C")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🎯":
-            role = discord.utils.get(payload.member.guild.roles, name="Dart")
+            role = discord.utils.get(member.guild.roles, name="Dart")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
         elif payload.emoji.name == "🌐":
-            role = discord.utils.get(payload.member.guild.roles, name="HTML/CSS")
+            role = discord.utils.get(member.guild.roles, name="HTML/CSS")
             if role in member.roles:
                 await member.remove_roles(role)
                 print(f"{role} role removed from {member}")
